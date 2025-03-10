@@ -7,3 +7,13 @@
   font-size: 18px;
   white-space: nowrap;
 }
+
+.button_POSITIVE {
+  background-color: rgb(100, 201, 100);
+  color: white;
+}
+
+.button_NEGATIVE {
+  background-color: rgb(253, 86, 95);
+  color: white;
+}
