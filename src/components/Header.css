@@ -8,4 +8,15 @@
 
 .header > .title {
   font-size: 25px;
+  flex: 1;
+  text-align: center;
+}
+
+.header > .leftchild {
+  width: 25%;
+}
+
+.header > .rightchild {
+  width: 25%;
+  text-align: right;
 }
