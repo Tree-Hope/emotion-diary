@@ -33,11 +33,11 @@ const reducer = (state, action) => {
     case "CREATE":
       return [action.data, ...state];
     case "UPDATE":
-      return state.map((item) => item.id === action.data.id ?
+      return state.map((item) => String(item.id) === action.data.id ?
         action.data : item
       );
     case "DELETE":
-      return state.filter((item) => item.id !== action.id);
+      return state.filter((item) => String(item.id) !== action.id);
     default:
       return state;
   }
