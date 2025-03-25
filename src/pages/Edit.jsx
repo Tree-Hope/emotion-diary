@@ -4,15 +4,13 @@ import Button from "../components/Button";
 import Editor from "../components/Editor";
 import { useContext } from "react";
 import { DiaryDispatchContext } from "../App";
-import { DiaryStateContext } from "../App";
+import useDiary from "../hooks/useDiary";
 
 const Edit = () => {
   const params = useParams();
   const nav = useNavigate();
   const { onDelete, onUpdate } = useContext(DiaryDispatchContext);
-  const data = useContext(DiaryStateContext);
-
-  const currentData = data.find((item) => String(item.id) === params.id);
+  const currentData = useDiary(params.id);
 
   const onClickDeleteButton = () => {
     if (confirm("정말 삭제 하시겠습니까?")) {
